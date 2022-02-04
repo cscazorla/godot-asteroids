@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func update_score(score):
-	$ScoreLabel.text = str(score)
+	$ScoreLabel.text = "Score: " + str(score)
 
 func update_player_health_bar(health):
 	$HealthBar.value = health
