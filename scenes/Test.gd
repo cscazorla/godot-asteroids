@@ -85,7 +85,6 @@ func _on_gameover():
 	$Player.queue_free()
 
 func _on_spawn_powerup_timer_timeout():
-	print("Health spawn time ", OS.get_unix_time())
 	var random_position = Vector2(rand_range(0, 1.0) * screen_size.x, rand_range(0, 1.0) * screen_size.y)
 	var health_powerup = PowerupHealth.instance()
 	add_child(health_powerup)
