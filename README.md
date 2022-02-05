@@ -12,7 +12,6 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 You can play this game [here](https://asteroids.cscazorla.es/) or just download the project and run it in Godot.
 
 # To do
-* The amount of life reduced when crashed into an asteroid should depend on the player's velociy magnitude of the collision.
 * When crashed into an asteroid the player should bounce back.
 * Add a menu or welcome message with instructions.
 * The weapon heats up if the player shoots too fast
