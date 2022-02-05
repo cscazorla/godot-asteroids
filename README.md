@@ -7,6 +7,10 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 * Proper physics models dealing with gravity, acceleration, angular drag, thrust direction, colliders, etc. 
 * Basic SFX (e.g. camera shaking when crashing into an asteroid)
 * Power ups (e.g. health)
+
+# Usage
+You can play this game [here](https://asteroids.cscazorla.es/) or just download the files and open [index.html](html/index.html) in your browser.
+
 # To do
 * There is a bug with the health bar. When player's life is bigger than 100 points, it resets to zero.
 * The amount of life reduced when crashed into an asteroid should depend on the player's velociy magnitude of the collision.
