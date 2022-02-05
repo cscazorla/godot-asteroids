@@ -85,6 +85,7 @@ func _on_area_entered(area):
 		else:
 			shake_effect = 0.5
 		decrease_life(amount_to_decrease)
+		linear_velocity -= area.linear_velocity.normalized() * (linear_velocity.length() * 0.5)
 		emit_signal("player_crashes_into_asteroid", area, shake_effect)
 	if area.is_in_group("powerup_healths"):
 		increase_life(0.1 * max_life)

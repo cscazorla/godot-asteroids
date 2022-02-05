@@ -5,6 +5,7 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 
 # Features
 * Proper physics models dealing with gravity, acceleration, angular drag, thrust direction, colliders, etc. 
+* When the ships crashes into an asteroid it trayectory gets affected accordingly. The amount of life reduced to the player depends on how big the collision was (i.e. speed)
 * Basic SFX (e.g. camera shaking when crashing into an asteroid)
 * Power ups (e.g. health)
 
@@ -12,7 +13,6 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 You can play this game [here](https://asteroids.cscazorla.es/) or just download the project and run it in Godot.
 
 # To do
-* When crashed into an asteroid the player should bounce back.
 * Add a menu or welcome message with instructions.
 * The weapon heats up if the player shoots too fast
 * SFX for the health bar
