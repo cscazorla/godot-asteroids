@@ -18,5 +18,3 @@ position = Vector2( 512, 300 )
 current = true
 
 [node name="SpawnPowerUpTimer" type="Timer" parent="."]
-wait_time = 15.0
-autostart = true

@@ -68,7 +68,7 @@ func decrease_life(amount):
 
 func increase_life(amount):
 	life += amount
-	life = wrapi(life, 0, 100)
+	life = clamp(life, 0, 100)
 	
 func _on_area_entered(area):
 	if area.is_in_group("asteroids"):
