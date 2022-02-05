@@ -18,11 +18,16 @@ func _ready():
 	screen_size = get_viewport_rect().size
 	
 	# Setup signals
-	$Player.connect("shoot", self, "_on_player_shoot")
-	$Player.connect("player_crashes_into_asteroid", self, "_on_player_crashes_into_asteroid")
-	$Player.connect("player_picks_up_health", self, "_on_player_picks_up_health")
-	$Player.connect("gameover", self, "_on_gameover")
-	$SpawnPowerUpTimer.connect("timeout", self, "_on_spawn_powerup_timer_timeout")
+	if $Player.connect("shoot", self, "_on_player_shoot") != OK:
+		print("Error connecting to the player shoot signal")
+	if $Player.connect("player_crashes_into_asteroid", self, "_on_player_crashes_into_asteroid") != OK:
+		print("Error connecting to the player crashing into an asteroid signal")
+	if $Player.connect("player_picks_up_health", self, "_on_player_picks_up_health") != OK:
+		print("Error connecting to the player picking up health signal")
+	if $Player.connect("gameover", self, "_on_gameover") != OK:
+		print("Error connecting to the dissappear timeout signal")
+	if $SpawnPowerUpTimer.connect("timeout", self, "_on_spawn_powerup_timer_timeout") != OK:
+		print("Error connecting to the dissappear timeout signal")
 
 	# Setup HUD
 	$HUD.update_score(score)

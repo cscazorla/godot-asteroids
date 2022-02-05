@@ -26,7 +26,8 @@ var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	connect("area_entered", self, "_on_area_entered")
+	if connect("area_entered", self, "_on_area_entered") != OK:
+		print("Error connecting to the area entered signal")
 
 func get_input():
 	$ParticlesThrust.emitting = false
