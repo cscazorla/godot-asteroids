@@ -12,7 +12,6 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 You can play this game [here](https://asteroids.cscazorla.es/) or just download the files and open [index.html](html/index.html) in your browser.
 
 # To do
-* There is a bug with the health bar. When player's life is bigger than 100 points, it resets to zero.
 * The amount of life reduced when crashed into an asteroid should depend on the player's velociy magnitude of the collision.
 * When crashed into an asteroid the player should bounce back.
 * Add a menu or welcome message with instructions.
