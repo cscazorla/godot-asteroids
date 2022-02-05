@@ -71,8 +71,8 @@ func _on_player_shoot_hits_asteroid(asteroid):
 		a2.init(asteroid.lifes - 1, asteroid.position - Vector2(10,10), asteroid.linear_velocity.rotated(-PI/4) * (3), asteroid.angular_velocity * (1.1))
 	asteroid.queue_free()
 
-func _on_player_crashes_into_asteroid(asteroid):
-	$ShakeCamera.add_trauma(0.5)
+func _on_player_crashes_into_asteroid(asteroid, shake_effect):
+	$ShakeCamera.add_trauma(shake_effect)
 	$HUD.update_player_health_bar($Player.life)
 	asteroid.queue_free()	
 

@@ -1,7 +1,8 @@
 extends Area2D
 
 # Player parameters
-export (int) var life = 100
+export (int) var max_life = 100
+export (int) var life_steps = 10
 export (int) var linear_thrust = 300
 export (float) var linear_drag = 0.5
 export (int) var angular_thrust = 5
@@ -9,11 +10,12 @@ export (float) var angular_drag = 0.5
 
 # Signals
 signal shoot(direction, location)
-signal player_crashes_into_asteroid(asteroid)
+signal player_crashes_into_asteroid(asteroid, shake_effect)
 signal player_picks_up_health(powerup_health)
 signal gameover()
 
-# Internal Physics
+# Internal
+var life
 var net_linear_acceleration = Vector2()
 var linear_acceleration = Vector2()
 var linear_velocity = Vector2()
@@ -25,6 +27,7 @@ var angular_velocity = 0
 var screen_size
 
 func _ready():
+	life = max_life
 	screen_size = get_viewport_rect().size
 	if connect("area_entered", self, "_on_area_entered") != OK:
 		print("Error connecting to the area entered signal")
@@ -73,8 +76,16 @@ func increase_life(amount):
 	
 func _on_area_entered(area):
 	if area.is_in_group("asteroids"):
-		decrease_life(10)
-		emit_signal("player_crashes_into_asteroid", area)
+		var shake_effect = 0
+		var amount_to_decrease = (linear_velocity.length() / linear_thrust) * life_steps * 4
+		if amount_to_decrease < (0.2 * max_life):
+			shake_effect = 0.2
+		elif amount_to_decrease >= (0.2 * max_life) && amount_to_decrease < (0.5 * max_life):
+			shake_effect = 0.4
+		else:
+			shake_effect = 0.5
+		decrease_life(amount_to_decrease)
+		emit_signal("player_crashes_into_asteroid", area, shake_effect)
 	if area.is_in_group("powerup_healths"):
-		increase_life(10)
+		increase_life(0.1 * max_life)
 		emit_signal("player_picks_up_health", area)
