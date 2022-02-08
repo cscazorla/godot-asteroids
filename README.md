@@ -7,6 +7,7 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 * Proper physics models dealing with gravity, acceleration, angular drag, thrust direction, colliders, etc. 
 * When the ships crashes into an asteroid it trayectory gets affected accordingly. The amount of life reduced to the player depends on how big the collision was (i.e. speed)
 * Basic SFX (e.g. camera shaking when crashing into an asteroid)
+* System of screens to show the messages (e.g. welcome, gameover) and menus.
 * Power ups (e.g. health)
 
 # Usage
