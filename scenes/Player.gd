@@ -27,10 +27,12 @@ var angular_velocity = 0
 var screen_size
 
 func _ready():
-	life = max_life
 	screen_size = get_viewport_rect().size
 	if connect("area_entered", self, "_on_area_entered") != OK:
 		print("Error connecting to the area entered signal")
+
+func init(_life):
+	life = _life
 
 func get_input():
 	$ParticlesThrust.emitting = false
@@ -88,5 +90,5 @@ func _on_area_entered(area):
 		linear_velocity -= area.linear_velocity.normalized() * (linear_velocity.length() * 0.5)
 		emit_signal("player_crashes_into_asteroid", area, shake_effect)
 	if area.is_in_group("powerup_healths"):
-		increase_life(0.1 * max_life)
+		increase_life(life_steps)
 		emit_signal("player_picks_up_health", area)

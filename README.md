@@ -13,8 +13,9 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 You can play this game [here](https://asteroids.cscazorla.es/) or just download the project and run it in Godot.
 
 # To do
-* Add a menu or welcome message with instructions.
+* Add a widget so the player can see how many seconds it lasted
 * The weapon heats up if the player shoots too fast
+* Add music and sounds
 * SFX for the health bar
 * Pause the game when pressing "P"
 * Currently when the player shots an asteroids it splits into 2 asteroids with the same size as the original asteroid:

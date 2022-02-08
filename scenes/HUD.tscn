@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/Bonus/kenvector_future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/HUD.gd" type="Script" id=2]
@@ -8,10 +8,6 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 131
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -42,23 +38,6 @@ __meta__ = {
 position = Vector2( 26, 29 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 3 )
-
-[node name="GameOverLabel" type="Label" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -469.0
-margin_top = -74.0
-margin_right = 469.0
-margin_bottom = 74.0
-custom_fonts/font = SubResource( 3 )
-text = "Game Over"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 margin_left = 49.0

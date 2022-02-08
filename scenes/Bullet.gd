@@ -1,7 +1,7 @@
 extends Area2D
 
 var velocity = Vector2.RIGHT
-var speed = 300
+var speed = 500
 
 # Signals
 signal hit_asteroid(asteroid)
