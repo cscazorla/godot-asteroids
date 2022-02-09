@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/UI/Screens.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ShakeCamera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Starfield.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -12,3 +13,5 @@ script = ExtResource( 3 )
 [node name="ShakeCamera" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512, 300 )
 current = true
+
+[node name="Starfield" parent="." instance=ExtResource( 4 )]

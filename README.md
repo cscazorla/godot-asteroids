@@ -9,6 +9,7 @@ Implementation of the classic Asteroids videogame using [Godot Engine](https://g
 * Basic SFX (e.g. camera shaking when crashing into an asteroid)
 * System of screens to show the messages (e.g. welcome, gameover) and menus.
 * Power ups (e.g. health)
+* Basic starfield effect for the background
 
 # Usage
 You can play this game [here](https://asteroids.cscazorla.es/) or just download the project and run it in Godot.
@@ -24,7 +25,6 @@ You can play this game [here](https://asteroids.cscazorla.es/) or just download 
   * The direction of the bullet hitting the asteroid should be taken into account when calculating the new direction of the asteroids
 * Add new power ups: shield, teletransport, bomb.
 * Add music & sounds.
-* Add a dynamic background.
 
 # License
 Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
